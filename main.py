@@ -1,8 +1,8 @@
-# Import necessary libraries
+
 import streamlit as st
 from textblob import TextBlob
 
-# Title and Description
+
 st.title("Sentiment Analysis Interactive GUI")
 st.write("Enter text below to analyze its sentiment:")
 
@@ -15,7 +15,7 @@ if st.button("Analyze Sentiment"):
         blob = TextBlob(user_input)
         sentiment_score = blob.sentiment.polarity
 
-        # Display results
+       
         st.write("Sentiment Score:", sentiment_score)
         if sentiment_score > 0:
             st.write("Sentiment: Positive 😊")
